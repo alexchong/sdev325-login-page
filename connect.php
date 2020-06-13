@@ -6,14 +6,15 @@ $errors = array();
 
 // database aliases
 $host = 'localhost';
-$u = 'root';
-$p = 'root';
-$db = 'sdev325';
+$u = 'root'; // login being used to access MySQL
+$p = 'root'; // password for the above login
+$db = 'sdev325'; // name of your database
 
 // query aliases
-$db_table = 'users';
-$column_email = 'user_email';
-$column_password = 'user_password';
+// NOTE: ensure the values for the query variables both your own named database elements
+$db_table = 'users'; // name of your table storing login credentials
+$column_email = 'user_email'; // name of column in $db_table being used to store emails/usernames
+$column_password = 'user_password'; // name of column in $db_table being used to store password hashes
 
 // connect to MySQL server
 $database = mysqli_connect($host, $u, $p, $db);
